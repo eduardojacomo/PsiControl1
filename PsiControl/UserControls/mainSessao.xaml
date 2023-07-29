@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="PsiControl.UserControls.mainSessao"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+              Height="720"  Width="1280">
+    <Border Background="#f2f2f2">
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Background="#91bbf2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Icon:PackIconMaterial Kind="NoteEdit" Height="20" Width="20" Grid.Row="0" Foreground="White" Margin="10 10 0 0"/>
+                    <TextBlock Text="Sessao" FontSize="16" FontWeight="SemiBold" Margin="40 10 0 0" Foreground="White"/>
+
+                    
+                    <Button Grid.Row="2" Style="{StaticResource menuButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="ProgressWrench" Height="20" Width="20" Margin="10 0 10 0" />
+                            <TextBlock Text="Recursos" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Row="3" Style="{StaticResource menuButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="BookEducation" Height="20" Width="20" Margin="10 0 10 0" />
+                            <TextBlock Text="Psicoeducação" />
+                        </StackPanel>
+                    </Button>
+                    <Button Grid.Row="4" Style="{StaticResource menuButton}" Click="Button_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Icon:PackIconMaterial Kind="CalendarAccount" Height="20" Width="20" Margin="10 0 10 0" />
+                            <TextBlock Text="Cadastrar Sessao" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+            </Border>
+            <Grid Grid.Column="1">
+                <StackPanel>
+                    <DataGrid Height="350" Width="750" Margin="0 80 0 0" Name="DgvSessoes">
+                        
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                        <Button Height="35" Width="80" Content="Gerar Sessoes" HorizontalAlignment="Center" Margin="700 0 0 0" Click="Button_Click_1"></Button>
+                        <Button Height="35" Width="80" Content="Confirmar" Margin=" 50 0 0 0"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+        
+    </Border>
+</UserControl>

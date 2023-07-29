@@ -1,0 +1,42 @@
+﻿<Window x:Class="PsiControl.LocalizaProfissional"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Icon ="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PsiControl"
+        mc:Ignorable="d"
+        Title="LocalizaProfissional" Height="450" Width="800"
+        WindowStyle="ToolWindow" WindowState="Normal" Name="windowLocalizaProfissional" >
+    
+    <Border Height="450" Width="800">
+        <Grid Height="400" Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBox Name="TxtBuscar" Margin=" 25 5 5 5" Width="550" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource TextBox}"/>
+                <Button Name="BtnBuscar" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="590 -43 5 5" Click="BtnBuscar_Click" 
+                        Style="{StaticResource comandoButton}">
+                    <TextBlock Text="Localizar" FontSize="12" FontWeight="SemiBold"/>
+                    
+                </Button>
+            </StackPanel>
+            <DataGrid Style="{DynamicResource DataGridStyle1}" RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" 
+                      Grid.Row="1" Name="DgvLocalizaProfissional" Margin="5 5 5 5" Height="300" Width="680" VerticalAlignment="Center" 
+                      HorizontalAlignment="Left" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding DataTable}"
+                      SelectionMode="Single" SelectionUnit="FullRow" BorderThickness="0" MouseDoubleClick="DgvLocalizaProfissional_MouseDoubleClick">
+
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="ID" Binding ="{Binding ID}" Visibility="Hidden" Width="60" FontSize="12" />
+                    <DataGridTextColumn Header="Codigo" Binding ="{Binding Codigo}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Nome" Binding ="{Binding Nome}" Width="350" FontSize="12"/>
+                    <DataGridTextColumn Header="Registro Profissional" Binding ="{Binding RegistroProfissional}" FontSize="12" Width="150" />
+                    <DataGridTextColumn Header="Foto" Binding ="{Binding Foto}" Visibility="Hidden" FontSize="12" Width="200" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        
+    </Border>
+</Window>

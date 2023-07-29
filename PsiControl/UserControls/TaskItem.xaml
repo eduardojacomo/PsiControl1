@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="PsiControl.UserControls.TaskItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+             mc:Ignorable="d" Name="taskItem1"
+             >
+    <Grid Margin="30 10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <fa:IconImage Icon="{Binding XPath=Icone, ElementName=taskItem1}" Grid.Column="0" Width="20" Height="20" VerticalAlignment="Top" Foreground="#ffffff" Margin="0 3 0 0"/>
+        <StackPanel Grid.Column="1" Margin="10 0">
+            <TextBlock FontSize="16" Foreground="{Binding Path=Cor, ElementName=taskItem1}" Text="{Binding Path=Tarefa, ElementName=taskItem1}"/>
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <fa:IconImage Icon="{Binding Path=IconeNotificacao, ElementName=taskItem1}" Width="12" Height="12" Foreground="#ffffff"/>
+                <TextBlock FontSize="12" Foreground="{Binding Path=Cor, ElementName=taskItem1}" Text="{Binding Path=Hora, ElementName=taskItem1}" Margin="8 0 0 0"/>
+
+            </StackPanel>
+            
+        </StackPanel>
+        <ToggleButton x:Name="detaisMenu" Grid.Column="2">
+            <ToggleButton.Template>
+                <ControlTemplate TargetType="ToggleButton">
+                    <fa:IconImage Icon="EllipsisV" Width="16" Height="16" Foreground="#ffffff" VerticalAlignment="Center"/>
+
+
+                </ControlTemplate>
+            </ToggleButton.Template>
+        </ToggleButton>
+
+        <Popup IsOpen="{Binding IsChecked ,ElementName=detaisMenu}" AllowsTransparency="True" StaysOpen="False" PlacementTarget="{Binding ElementName=detaisMenu}" Placement="Left" VerticalOffset="30" HorizontalOffset="15">
+            <Border Background=" #ffffff" CornerRadius="5" Padding="0 4">
+                <StackPanel>
+                    <local:TasksEvent Icone="Check" Titulo="Check"/>
+                    <local:TasksEvent Icone="BellSlash" Titulo="Mute"/>
+                    <local:TasksEvent Icone="PencilAlt" Titulo="Edit"/>
+                    <local:TasksEvent Icone="Trash" Titulo="Delete"/>
+                    
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</UserControl>

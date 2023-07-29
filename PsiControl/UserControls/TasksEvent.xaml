@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="PsiControl.UserControls.TasksEvent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+             mc:Ignorable="d" 
+             >
+    <Button>
+        <Button.Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" Padding="10 5" BorderThickness="0" Width="150">
+                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#e9e9e9"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Button.Style>
+
+        <StackPanel Orientation="Horizontal">
+            <fa:IconImage Icon="{Binding Path=Icone, ElementName=TasksEvent}" Width="13" Height="13" Foreground="#666666" Margin="5 0 20 0" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Path=Titulo, ElementName=TasksEvent}" Foreground="#666666" FontSize="14"/>
+        </StackPanel>
+        
+    </Button>
+</UserControl>

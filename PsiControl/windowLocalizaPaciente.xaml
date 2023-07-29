@@ -1,0 +1,58 @@
+﻿<Window x:Class="PsiControl.windowLocalizaPaciente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PsiControl"
+        mc:Ignorable="d"
+        Title="Localiza Paciente" Height="450" Width="800">
+    <Border Height="450" Width="800">
+        <Grid Height="400" Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBox Name="TxtBuscar" Margin=" 25 5 5 5" Width="550" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource TextBox}"/>
+                <Button Name="BtnBuscar" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="590 -43 5 5" Click="BtnBuscar_Click" 
+                        Style="{StaticResource comandoButton}">
+                    <TextBlock Text="Localizar" FontSize="12" FontWeight="SemiBold"/>
+
+                </Button>
+            </StackPanel>
+            <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" 
+                      Grid.Row="1" Name="DgvLocalizaPaciente" Margin="5 5 5 5" Height="300" Width="680" VerticalAlignment="Center" 
+                      HorizontalAlignment="Left" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding DataTable}"
+                      SelectionMode="Single" SelectionUnit="FullRow" BorderThickness="0" MouseDoubleClick="DgvLocalizaPaciente_MouseDoubleClick">
+
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Codigo" Binding ="{Binding Codigo}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Nome" Binding ="{Binding Nome}" Width="250" FontSize="12"/>
+                    <DataGridTextColumn Header="Endereco" Binding ="{Binding Endereco}" Visibility="Hidden" FontSize="12" Width="150" />
+                    <DataGridTextColumn Header="Numero" Binding ="{Binding Numero}" Visibility="Hidden" FontSize="12" Width="30" />
+                    <DataGridTextColumn Header="Complemento" Binding ="{Binding Complemento}" Visibility="Hidden" FontSize="12" Width="80" />
+                    <DataGridTextColumn Header="Bairro" Binding ="{Binding Bairro}" FontSize="12" Width="50" />
+                    <DataGridTextColumn Header="Cidade" Binding ="{Binding Cidade}" FontSize="12" Width="50" />
+                    <DataGridTextColumn Header="UF" Binding ="{Binding UF}" FontSize="12" Width="30" />
+                    <DataGridTextColumn Header="Celular" Binding ="{Binding Celular}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="WhatsApp" Binding ="{Binding Celular2}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Email" Binding ="{Binding Email}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Sexo" Binding ="{Binding Sexo}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Data de Nascimento" Binding ="{Binding DataNascimento}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="DataCadadtro" Binding ="{Binding DataCadastro}" Visibility="Hidden" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="DataAlteração" Binding ="{Binding DataAlteracao}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Valor da Sessao" Binding ="{Binding ValorSessao}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="Dia do Vencimento" Binding ="{Binding DiaVencimento}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="DiaSessao" Binding ="{Binding DiaSessao}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="HoraSessao" Binding ="{Binding HoraSessao}" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="CPF" Binding ="{Binding CPF}" Visibility="Hidden" FontSize="12" Width="60" />
+                    <DataGridTextColumn Header="CEP" Binding ="{Binding CEP}" Visibility="Hidden" FontSize="12" Width="60" />
+                    
+
+                    <DataGridTextColumn Header="Foto" Binding ="{Binding Foto}" Visibility="Hidden" FontSize="12" Width="200" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Border>
+</Window>

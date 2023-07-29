@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="PsiControl.UserControls.EventoAgenda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+             mc:Ignorable="d" Name="eventoagenda"
+             Height="35" Width="120">
+    <Button Height="35" Width="120" Opacity="0.5">
+        <Button.Background>
+            <SolidColorBrush Color="{Binding Path=Background1, ElementName=eventoagenda}" />
+        </Button.Background>
+        <StackPanel Orientation="Horizontal">
+            <fa:IconImage Icon="{Binding Path=Icone, ElementName=eventoagenda}" Margin="0 0 5 0" Width="20" Height="20" Foreground="#f2f2f2" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Path=Paciente, ElementName=eventoagenda}" Foreground="#f2f2f2" FontSize="14"/>
+        </StackPanel>
+
+    </Button>
+</UserControl>

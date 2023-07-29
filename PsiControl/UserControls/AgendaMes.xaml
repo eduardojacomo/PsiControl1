@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="PsiControl.UserControls.AgendaMes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:PsiControl.UserControls"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+            Height="620" Width="900">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="20 0 0 20" Background="#fefefe" Grid.Column="0"/>
+            <Border CornerRadius=" 0 20 20 0" Background="#3084f2" MouseDown="Border_MouseDown" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 0" VerticalAlignment="Center" Grid.Row="1">
+                    <Button Width="20" Height="20" Style="{StaticResource iconButton}">
+                        <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource arrow}"/>
+                    </Button>
+                    <Button Content="2021" Style="{StaticResource iconButton}"/>
+                    <Button Content="2022" Style="{StaticResource iconButton}"/>
+                    <Button Content="2023" Style="{StaticResource iconButton}" Foreground="#4880ff"/>
+                    <Button Content="2024" Style="{StaticResource iconButton}"/>
+                    <Button Content="2025" Style="{StaticResource iconButton}"/>
+                    <Button Width="20" Height="20" Style="{StaticResource iconButton}">
+                        <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource arrow}"/>
+                    </Button>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="2">
+                    <Button Content="1" Style="{StaticResource iconButton}"/>
+                    <Button Content="2" Style="{StaticResource iconButton}"/>
+                    <Button Content="3" Style="{StaticResource iconButton}"/>
+                    <Button Content="4" Style="{StaticResource iconButton}"/>
+                    <Button Content="5" Style="{StaticResource iconButton}"/>
+                    <Button Content="6" Style="{StaticResource iconButton}"/>
+                    <Button Content="7" Style="{StaticResource iconButton}"/>
+                    <Button Content="8" Style="{StaticResource iconButton}"/>
+                    <Button Content="9" Style="{StaticResource iconButton}"/>
+                    <Button Content="10" Style="{StaticResource iconButton}"/>
+                    <Button Content="11" Style="{StaticResource iconButton}"/>
+                    <Button Content="12" Style="{StaticResource iconButton}"/>
+                </StackPanel>
+                <Separator Grid.Row="3" Height="0.8" Width="600" Background="#cacaca" Margin="10 0 0 0" VerticalAlignment="Top" />
+
+                <TextBlock Grid.Row="4" Text="Novembro" Foreground="#3084f2" FontSize="24" TextAlignment="Center" FontWeight="SemiBold"/>
+                <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarAgendaMes}" Grid.Row="5"/>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="350"/>
+                    
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="20 0 0 0">
+                    <TextBlock Text="16" FontSize="46" Foreground="#ffffff"/>
+                    <StackPanel Margin="10 0 0 0" VerticalAlignment="Center">
+                        <TextBlock Text="Novembro" Foreground="#ffffff" FontSize="22"/>
+                        <TextBlock Text="Segunda-Feira" Foreground="#91bbf2" FontSize="12"/>
+                    </StackPanel>
+                    <Button Width="32" Height="32" Style="{StaticResource iconButton}" Margin="240 0 5 0">
+                        <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource arrowBig}"/>
+                    </Button>
+                    <Button Width="32" Height="32" Style="{StaticResource iconButton}" Margin="-0 0 5 0">
+                        <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource arrowBig}"/>
+                    </Button>
+                </StackPanel>
+                <TextBlock Grid.Row="2" Text="5 Tarefas a serem concluidas" FontSize="16" Foreground="#DCE7F4" Margin="30 5 0 0"/>
+
+                <Border Grid.Row="3" Background="#91BBF2" CornerRadius="10" HorizontalAlignment="Center" Width="380" Padding="10 0 10 0" Margin="0 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60*"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="60*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Icon:PackIconMaterialDesign Kind="Edit" Width="15" Height="15" Foreground="#DCE7F4" VerticalAlignment="Center"/>
+                                <TextBlock Text="Adicionar Tarefa" Foreground="#DCE7F4" FontSize="14" VerticalAlignment="Center" Margin="5 0 0 0" />
+                                <TextBox Style="{StaticResource TextBoxNotes}" Name="TxtTarefa" Margin="10,0,0,0" Width="180" Height="35" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <Separator Margin="0 0 0 0" Height="0.8" Background="#DCE7f4" Grid.Row="1"/>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <Icon:PackIconMaterialDesign Kind="Timer" Width="15" Height="15" Foreground="#DCE7F4" VerticalAlignment="Center"/>
+                                <TextBlock Text="_ _ : _ _ - _ _ : _ _" Foreground="#DCE7F4" FontSize="14" VerticalAlignment="Center"  Margin="5 0 0 0" />
+                                <TextBox Style="{StaticResource TextBoxNotes}" Name="TxtHoraTarefa" Margin="10,0,0,0" Width="180" Height="35" />
+                            </StackPanel>
+                        </Grid>
+                        <Button Grid.Column="1" Style="{StaticResource iconButton}" Background="Transparent" Width="30" Height="30">
+                        <Icon:PackIconMaterial Kind="PlusCircle" Background="Transparent" Width="28" Height="28" Foreground="#ffffff"/>
+                        </Button>
+                    </Grid>
+
+                </Border>
+                <Grid Grid.Row="4">
+                    <StackPanel Name="GridTasks">
+                        <!--<uc:TaskItem Tarefa="NovaTarefa" Hora="10:50 - 11:30" Icone="CheckCircle" Cor="#ffffff" IconeNotificacao="BellSlash"/>
+                        <uc:TaskItem Tarefa="NovaTarefa1" Hora="16:50 - 18:30" Icone="CheckCircle" Cor="#ffffff" IconeNotificacao="BellSlash"/>
+                        <uc:TaskItem Tarefa="NovaTarefa1" Hora="16:50 - 18:30" Icone="CircleNotch" Cor="#ffffff" IconeNotificacao="BellSlash"/>-->
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

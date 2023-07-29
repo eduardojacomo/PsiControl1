@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="PsiControl.UserControls.Agenda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:PsiControl.UserControls"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:PsiControl.UserControls"
+             mc:Ignorable="d" 
+              Height="680" Width="1115">
+    <Border Background="#f2f2f2" Width="1115" Height="680">
+        <Grid Margin="20">
+            <Border Background="White" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" Direction="-130" ShadowDepth="51" Color="#afafaf" Opacity="0.1" />
+                </Border.Effect>
+                <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Agenda da Semana" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18" Foreground="#4880ff"/>
+                        <Button  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource agendaButton}" Margin="5 5 100 5" Width="95">
+                            <StackPanel Orientation="Vertical">
+                                <Icon:PackIconMaterial Kind="ArrowLeft" Height="15" Width="15" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Semana Anterior"/>
+                            </StackPanel>
+                        </Button>
+                        <Button  Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource agendaButton}" Margin="5 5 0 5" Width="95">
+                            <StackPanel Orientation="Vertical">
+                                <Icon:PackIconMaterial Kind="ArrowRight" Height="15" Width="15" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Próxima Semana"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="0 40 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="140"/>
+
+                            <ColumnDefinition Width="140"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="Segunda-Feira" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="2" Text="Terça-Feira" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="3" Text="Quarta-Feira" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="4" Text="Quinta-Feira" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="5" Text="Sexta-Feira" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="6" Text="Sabado" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="7" Text="Domingo" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="07:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="08:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="09:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="10:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="6" Grid.Column="0" Text="11:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="7" Grid.Column="0" Text="12:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="8" Grid.Column="0" Text="13:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="9" Grid.Column="0" Text="14:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="10" Grid.Column="0" Text="15:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="11" Grid.Column="0" Text="16:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Row="12" Grid.Column="0" Text="17:00" Style="{StaticResource textLabel}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="7" Paciente="Pedro" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="5" Paciente="Thiago" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="4" Paciente="João" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="8" Paciente="Marta" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="9" Paciente="Maria" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="3" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="6" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="10" Paciente="Disponível" Icone="BookOpen" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="11" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="5" Grid.Row="12" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="5" Paciente="Vitor" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="4" Paciente="Flávia" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="9" Paciente="Iavana" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="10" Paciente="Benedito" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="3" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="6" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="11" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="4" Grid.Row="12" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="3" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="6" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="4" Paciente="Fernanda" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="7" Paciente="Andreia" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="9" Paciente="Joel" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="10" Paciente="Rafael" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="11" Paciente="Mara" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="12" Paciente="Mario" Icone="CheckDouble" Background1="#3084f2" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="3" Grid.Row="5" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="2" Grid.Row="4" Paciente="Disponível" Icone="Calendar" Background1="#0CF25D" Loaded="EventoAgenda_Loaded" />
+
+                        <uc:EventoAgenda Grid.Column="2" Grid.Row="3" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+                        <uc:EventoAgenda Grid.Column="2" Grid.Row="6" Paciente="Indisponivel" Icone="PowerOff" Background1="#818274" Loaded="EventoAgenda_Loaded" />
+
+                        <!--<uc:Eve Grid.Row="2" Paciente="Simão Pedro" Horario="10:00" Loaded="Atendimentos_Loaded" VerticalAlignment="Center" BorderThickness="0 0 0 1" BorderBrush="#FFC0CAd8" />-->
+                    </Grid>
+                </StackPanel>
+             
+            </Border>
+        </Grid> 
+    </Border>
+</UserControl>

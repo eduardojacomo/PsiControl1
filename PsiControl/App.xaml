@@ -1,0 +1,38 @@
+﻿<Application x:Class="PsiControl.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Icon ="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:PsiControl"
+             StartupUri="Main.xaml"
+             xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfButtonsMenu.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfDataGridView.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfTextBoxForm.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfTextBoxSearch.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfTopButton.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfOtherButton.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfTextBlock.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfCombobox.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfSearchButton.xaml" />
+                <ResourceDictionary Source="RessourcesDictionaries/StyleOfCalendarAgendaMes.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+
+
+        
+
+        
+
+
+        
+        
+
+
+
+    </Application.Resources>
+</Application>
